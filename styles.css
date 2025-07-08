@@ -1,6 +1,13 @@
 /* Import Additional Fonts for Street Style */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Itim&display=swap');
 
+/* CSS Variables - ИЗМЕНИТЕ ЦВЕТ ЗДЕСЬ! */
+:root {
+    --main-color: #ad2922;        /* Основной цвет (оранжевый) */
+    --main-color-dark: #96231d;   /* Темный оттенок основного цвета */
+    --main-color-light: #be2f28;  /* Светлый оттенок основного цвета */
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -73,7 +80,7 @@ h1, h2, h3 {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: #ff6b35;
+    background: var(--main-color);
 }
 
 /* Hero Section with Graffiti Style - более приглушенная */
@@ -147,7 +154,7 @@ h1, h2, h3 {
     font-weight: 400;
     text-shadow: 2px 2px 0 #000;
     transform: rotate(1deg);
-    color: #ff6b35;
+    color: var(--main-color);
     animation: subtitlePulse 3s ease-in-out infinite;
     letter-spacing: 1px;
 }
@@ -159,7 +166,7 @@ h1, h2, h3 {
 
 /* Hook Section with Sticker Style - более приглушенная */
 .hook {
-    background: linear-gradient(45deg, #ff6b35, #e85d04, #ff6b35);
+    background: linear-gradient(45deg, var(--main-color), var(--main-color-dark), var(--main-color));
     padding: 4rem 0;
     text-align: center;
     position: relative;
@@ -217,10 +224,10 @@ h1, h2, h3 {
     left: 20px;
     font-family: 'Space Mono', monospace;
     font-size: 1.2rem;
-    color: #ff6b35;
+    color: var(--main-color);
     background: #000;
     padding: 8px 12px;
-    border: 2px solid #ff6b35;
+    border: 2px solid var(--main-color);
     transform: rotate(-8deg);
     text-shadow: 1px 1px 0 #000;
     animation: tagFloat 4s ease-in-out infinite;
@@ -309,7 +316,7 @@ h1, h2, h3 {
     object-fit: cover;
     border: 3px solid #fff;
     box-shadow: 
-        8px 8px 0 #ff6b35,
+        8px 8px 0 var(--main-color),
         16px 16px 0 #000;
     position: relative;
     filter: grayscale(20%);
@@ -337,7 +344,7 @@ h1, h2, h3 {
     position: absolute;
     top: 8px;
     right: 8px;
-    background: #ff6b35;
+    background: var(--main-color);
     color: #fff;
     padding: 4px 8px;
     font-family: 'Itim', cursive;
@@ -417,8 +424,8 @@ h1, h2, h3 {
 
 .team-member {
     text-align: center;
-    padding: 2rem;
-    background: linear-gradient(45deg, #ff6b35, #e85d04);
+    padding: 2.5rem;
+    background: linear-gradient(45deg, var(--main-color), var(--main-color-dark));
     border: 2px solid #fff;
     border-radius: 0;
     box-shadow: 
@@ -427,6 +434,8 @@ h1, h2, h3 {
     transition: all 0.3s ease;
     transform: rotate(var(--rotation, -2deg));
     position: relative;
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .team-member:nth-child(2) {
@@ -448,14 +457,34 @@ h1, h2, h3 {
         24px 24px 0 #333;
 }
 
+.member-photo {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 4px 4px 0 #000;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .member-image {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 0 #000;
+}
+
 .member-name {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
+    font-family: 'Itim', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
     color: #000;
     text-shadow: 1px 1px 0 #fff;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
@@ -466,6 +495,24 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 0.9rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.3rem 0.8rem;
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+.member-description {
+    color: #000;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border: 1px solid #000;
+    margin-top: 1rem;
 }
 
 /* Why Support Us with Spray Paint Effect - более приглушенная */
@@ -496,7 +543,7 @@ h1, h2, h3 {
     text-align: center;
     padding: 2rem;
     background: #000;
-    border: 2px solid #ff6b35;
+    border: 2px solid var(--main-color);
     border-radius: 0;
     position: relative;
     transform: rotate(var(--rotation, -1deg));
@@ -510,7 +557,7 @@ h1, h2, h3 {
 
 .reason-item:nth-child(3) {
     --rotation: -1deg;
-    border-color: #ff6b35;
+    border-color: var(--main-color);
 }
 
 .reason-item:nth-child(4) {
@@ -576,7 +623,7 @@ h1, h2, h3 {
 
 .donate-button {
     display: inline-block;
-    background: linear-gradient(45deg, #ff6b35, #e85d04, #ff6b35);
+    background: linear-gradient(45deg, var(--main-color), var(--main-color-dark), var(--main-color));
     color: #000;
     padding: 1.2rem 3.5rem;
     font-family: 'Itim', cursive;
@@ -605,7 +652,7 @@ h1, h2, h3 {
 }
 
 .donate-button:hover {
-    background: linear-gradient(45deg, #e85d04, #ff6b35, #e85d04);
+    background: linear-gradient(45deg, var(--main-color-dark), var(--main-color), var(--main-color-dark));
     transform: scale(1.05) rotate(-1deg);
     box-shadow: 
         0 0 25px rgba(255, 107, 53, 0.5),
@@ -613,7 +660,7 @@ h1, h2, h3 {
 }
 
 .payment-methods {
-    color: #ff6b35;
+    color: var(--main-color);
     font-size: 0.9rem;
     margin-top: 2rem;
     font-family: 'Space Mono', monospace;
@@ -650,7 +697,7 @@ h1, h2, h3 {
     font-family: 'Urbanist', sans-serif;
     padding: 1rem;
     background: #000;
-    border: 2px solid #ff6b35;
+    border: 2px solid var(--main-color);
     transform: rotate(var(--rotation, -1deg));
     transition: all 0.3s ease;
 }
@@ -662,7 +709,7 @@ h1, h2, h3 {
 
 .contact-item:nth-child(3) {
     --rotation: -1deg;
-    border-color: #ff6b35;
+    border-color: var(--main-color);
 }
 
 .contact-item:hover {
@@ -670,7 +717,7 @@ h1, h2, h3 {
 }
 
 .contact-link {
-    color: #ff6b35;
+    color: var(--main-color);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -685,11 +732,11 @@ h1, h2, h3 {
 /* Footer with Graffiti Style - более приглушенная */
 .footer {
     background: #000;
-    color: #ff6b35;
+    color: var(--main-color);
     padding: 2.5rem 0;
     text-align: center;
     position: relative;
-    border-top: 2px solid #ff6b35;
+    border-top: 2px solid var(--main-color);
 }
 
 .footer::before {
@@ -761,8 +808,18 @@ h1, h2, h3 {
     
     .team-member,
     .reason-item {
-        padding: 1.5rem;
+        padding: 2rem;
         transform: rotate(0deg);
+    }
+    
+    .member-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .member-description {
+        font-size: 0.8rem;
+        padding: 0.8rem;
     }
     
     .donate-button {
@@ -792,7 +849,7 @@ html {
 /* Focus States for Accessibility */
 .donate-button:focus,
 .contact-link:focus {
-    outline: 2px solid #ff6b35;
+    outline: 2px solid var(--main-color);
     outline-offset: 2px;
 }
 
@@ -813,7 +870,7 @@ html {
     right: 20px;
     font-family: 'Space Mono', monospace;
     font-size: 1.8rem;
-    color: #ff6b35;
+    color: var(--main-color);
     transform: rotate(12deg);
     text-shadow: 2px 2px 0 #000;
     opacity: 0.4;
@@ -827,7 +884,7 @@ html {
     left: 20px;
     font-family: 'Space Mono', monospace;
     font-size: 1.3rem;
-    color: #ff6b35;
+    color: var(--main-color);
     transform: rotate(-5deg);
     text-shadow: 2px 2px 0 #000;
     opacity: 0.4;
@@ -880,10 +937,10 @@ html {
     top: -8px;
     right: -8px;
     background: #000;
-    color: #ff6b35;
+    color: var(--main-color);
     padding: 4px;
     font-size: 0.7rem;
-    border: 1px solid #ff6b35;
+    border: 1px solid var(--main-color);
     transform: rotate(12deg);
 }
 
@@ -892,7 +949,7 @@ html {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #ff6b35;
+    background: var(--main-color);
     color: #000;
     width: 25px;
     height: 25px;
@@ -913,7 +970,7 @@ html {
     left: 30px;
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
-    color: #ff6b35;
+    color: var(--main-color);
     transform: rotate(-15deg);
     text-shadow: 2px 2px 0 #000;
     opacity: 0.3;
@@ -949,7 +1006,7 @@ html {
     top: 20%;
     right: 10%;
     font-size: 2rem;
-    color: #ff6b35;
+    color: var(--main-color);
     transform: rotate(15deg);
     animation-delay: 0s;
 }
@@ -967,7 +1024,7 @@ html {
     top: 60%;
     right: 15%;
     font-size: 1.5rem;
-    color: #ff6b35;
+    color: var(--main-color);
     transform: rotate(8deg);
     animation-delay: 4s;
 }
@@ -993,7 +1050,7 @@ html {
     top: 15%;
     right: 5%;
     font-size: 1.8rem;
-    color: #ff6b35;
+    color: var(--main-color);
     transform: rotate(20deg);
     animation-delay: 0s;
 }
