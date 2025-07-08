@@ -1,5 +1,5 @@
 /* Import Additional Fonts for Street Style */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Itim&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -54,14 +54,15 @@ h1, h2, h3 {
 }
 
 .section-title {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 3rem;
+    font-family: 'Itim', cursive;
+    font-size: 3.2rem;
     margin-bottom: 2rem;
     text-align: center;
     color: #fff;
     text-shadow: 2px 2px 0 #000;
     transform: rotate(-1deg);
     position: relative;
+    font-weight: 400;
 }
 
 .section-title::after {
@@ -125,14 +126,14 @@ h1, h2, h3 {
 }
 
 .hero-title {
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Itim', cursive;
     font-size: 4.5rem;
-    font-weight: 900;
+    font-weight: 400;
     margin-bottom: 1rem;
     text-shadow: 3px 3px 0 #000;
     transform: rotate(-2deg);
     animation: titleFloat 4s ease-in-out infinite;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 @keyframes titleFloat {
@@ -141,14 +142,14 @@ h1, h2, h3 {
 }
 
 .hero-subtitle {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.5rem;
+    font-family: 'Itim', cursive;
+    font-size: 1.8rem;
     font-weight: 400;
     text-shadow: 2px 2px 0 #000;
     transform: rotate(1deg);
     color: #ff6b35;
     animation: subtitlePulse 3s ease-in-out infinite;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 @keyframes subtitlePulse {
@@ -183,16 +184,16 @@ h1, h2, h3 {
 }
 
 .hook-text {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Itim', cursive;
+    font-size: 2.8rem;
+    font-weight: 400;
     color: #000;
     max-width: 900px;
     margin: 0 auto;
     text-shadow: 1px 1px 0 #fff;
     transform: skewY(1deg);
     position: relative;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .hook-text::after {
@@ -339,16 +340,16 @@ h1, h2, h3 {
     background: #ff6b35;
     color: #fff;
     padding: 4px 8px;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-family: 'Itim', cursive;
+    font-size: 0.8rem;
+    font-weight: 400;
     text-transform: uppercase;
     border: 1px solid #fff;
     transform: rotate(12deg);
     z-index: 5;
     box-shadow: 1px 1px 0 #000;
     animation: stickerGlow 3s ease-in-out infinite alternate;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 @keyframes stickerGlow {
@@ -578,13 +579,13 @@ h1, h2, h3 {
     background: linear-gradient(45deg, #ff6b35, #e85d04, #ff6b35);
     color: #000;
     padding: 1.2rem 3.5rem;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-family: 'Itim', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
     text-decoration: none;
     border: 3px solid #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     position: relative;
     transition: all 0.3s ease;
     margin-bottom: 2rem;
@@ -936,8 +937,8 @@ html {
 /* Graffiti Tags - новые элементы */
 .graffiti-tag {
     position: absolute;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
+    font-family: 'Itim', cursive;
+    font-weight: 400;
     text-transform: uppercase;
     text-shadow: 2px 2px 0 #000;
     z-index: 4;
@@ -979,8 +980,8 @@ html {
 /* Street Art Elements */
 .street-art-element {
     position: absolute;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
+    font-family: 'Itim', cursive;
+    font-weight: 400;
     text-transform: uppercase;
     text-shadow: 2px 2px 0 #000;
     z-index: 3;
