@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - THE PLACE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&family=Itim&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 4px solid #333;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff6b6b;
+            color: white;
+            border: 3px solid #333;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .back-button:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            font-family: 'Itim', cursive;
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0px #ff6b6b;
+            transform: rotate(-1deg);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .payment-option {
+            background: white;
+            border: 4px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-option:nth-child(1) {
+            transform: rotate(-2deg);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .payment-option:nth-child(2) {
+            transform: rotate(2deg);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .payment-option:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .payment-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .payment-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .payment-description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .coming-soon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffeaa7;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            border: 2px solid #333;
+            transform: rotate(15deg);
+        }
+
+        .qr-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            border: 2px dashed rgba(255,255,255,0.5);
+        }
+
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.3);
+            border: 2px dashed rgba(255,255,255,0.7);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+            
+            .payment-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .payment-option {
+                padding: 20px;
+            }
+            
+            .payment-icon {
+                font-size: 3em;
+            }
+            
+            .payment-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back</a>
+        
+        <h1 class="title">DONATE</h1>
+        <p class="subtitle">Choose your preferred payment method</p>
+        <p class="subtitle">เลือกวิธีการชำระเงินที่คุณต้องการ</p>
+        
+        <div class="payment-options">
+            <div class="payment-option" onclick="selectPayPal()">
+                <div class="coming-soon">Coming Soon</div>
+                <span class="payment-icon">💳</span>
+                <h3 class="payment-title">PayPal</h3>
+                <p class="payment-description">
+                    Secure international payments<br>
+                    การชำระเงินระหว่างประเทศที่ปลอดภัย
+                </p>
+            </div>
+            
+            <div class="payment-option" onclick="selectPromptPay()">
+                <span class="payment-icon">📱</span>
+                <h3 class="payment-title">PromptPay</h3>
+                <p class="payment-description">
+                    Quick Thai mobile payment<br>
+                    การชำระเงินผ่านมือถือแบบไทย
+                </p>
+                <div class="qr-section">
+                    <div class="qr-placeholder">
+                        QR Code<br>
+                        รหัส QR
+                    </div>
+                    <p style="font-size: 0.9em;">
+                        Phone: +66 891-891-777<br>
+                        โทร: +66 891-891-777
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectPayPal() {
+            alert('PayPal payment coming soon!\nการชำระเงินผ่าน PayPal เร็วๆ นี้!');
+        }
+
+        function selectPromptPay() {
+            alert('Please scan the QR code or transfer to +66 891-891-777\nกรุณาสแกน QR Code หรือโอนเงินไปที่ +66 891-891-777');
+        }
+    </script>
+</body>
+</html> 
