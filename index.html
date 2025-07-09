@@ -3,62 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Place Hua Hin - Creative Skatepark & Culture Hub</title>
+    <title>ESCAPE | Urban Skate Park Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&family=Itim&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section with Background Image -->
+    <!-- Language Switcher -->
+    <div class="language-switcher" id="languageSwitcher">
+        <button class="lang-btn" onclick="switchLanguage()">
+            <span class="lang-text" id="langText">ไทย</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <h1 class="hero-title">The Place Hua Hin</h1>
-                <p class="hero-subtitle">More than a Skatepark — A Movement</p>
+                <h1 class="hero-title" data-en="THE PLACE" data-th="เดอะเพลส">THE PLACE</h1>
+                <p class="hero-subtitle" data-en="The Place is more than just a skatepark — it's an international space for riders, artists, and food lovers, where sport, creativity, and culture come together as a community. People from all over the world gather here to share experiences and inspiration." data-th="เดอะเพลสเป็นมากกว่าสเก็ตปาร์ก — เป็นพื้นที่นานาชาติสำหรับผู้เล่น ศิลปิน และผู้รักอาหาร ที่กีฬา ความคิดสร้างสรรค์ และวัฒนธรรมมารวมกันเป็นชุมชน คนจากทั่วโลกมาแบ่งปันประสบการณ์และแรงบันดาลใจ">The Place is more than just a skatepark — it's an international space for riders, artists, and food lovers, where sport, creativity, and culture come together as a community. People from all over the world gather here to share experiences and inspiration.
+                </p>
+                <a href="#donate" class="hero-donate-btn" data-en="SUPPORT OUR DREAM" data-th="สนับสนุนความฝันของเรา">SUPPORT OUR DREAM</a>
             </div>
         </div>
-        <!-- Graffiti Tags -->
-        <div class="graffiti-tag graffiti-tag-1">SK8</div>
-        <div class="graffiti-tag graffiti-tag-2">FREEDOM</div>
-        <div class="graffiti-tag graffiti-tag-3">CULTURE</div>
     </header>
 
     <!-- Hook Section -->
     <section class="hook">
         <div class="container">
-            <h2 class="hook-text">Help us build Thailand's most exciting skate & community hub!</h2>
-            <div class="street-tag">SKATE OR DIE</div>
+            <h2 class="hook-text" data-en="WE ARE MORE THAN JUST A TEAM — WE ARE AN INTERNATIONAL COMMUNITY-DRIVEN COLLECTIVE" data-th="เราคือมากกว่าทีม — เราคือกลุ่มชุมชนนานาชาติที่ขับเคลื่อนด้วยชุมชน">WE ARE MORE THAN JUST A TEAM — WE ARE AN INTERNATIONAL COMMUNITY-DRIVEN COLLECTIVE</h2>
         </div>
     </section>
 
-    <!-- Our Vision Section -->
+    <!-- Vision Section -->
     <section class="vision">
         <div class="container">
-            <h2 class="section-title">Our Vision</h2>
-            <!-- Street Art Elements -->
-            <div class="street-art-element street-art-1">ART</div>
-            <div class="street-art-element street-art-2">SKATE</div>
-            <p class="vision-text">
-                The Place Hua Hin will be more than just a skatepark—it will be a vibrant community hub where creativity, 
-                culture, and sport collide. We're building a space that celebrates the raw energy of skateboarding while 
-                fostering connections between locals and visitors, artists and athletes, dreamers and doers.
+            <h2 class="section-title" data-en="OUR VISION" data-th="วิสัยทัศน์ของเรา">OUR VISION</h2>
+            <p class="vision-text" data-en="THE DESIGN OF THE PLACE STARTED WITH SKETCHES, CAPTURING THE IDEAL FLOW AND FUNCTIONALITY. ONCE THE LAYOUT WAS FINALIZED, WE DEVELOPED 3D RENDERS, BRINGING THE VISION INTO LIFE. THESE RENDERS SERVE AS A BLUEPRINT FOR CONSTRUCTION AND TO SHOWCASE THE PARK'S REALISTIC LOOK." data-th="การออกแบบเดอะเพลสเริ่มต้นจากภาพร่าง จับการไหลและการใช้งานที่เหมาะสม เมื่อเลย์เอาต์เสร็จ เราพัฒนา 3D เรนเดอร์ ทำให้วิสัยทัศน์มีชีวิต การเรนเดอร์เหล่านี้เป็นพิมพ์เขียวสำหรับการก่อสร้างและแสดงรูปลักษณ์ที่เหมือนจริงของสวนสาธารณะ">
+                THE DESIGN OF THE PLACE STARTED WITH SKETCHES, CAPTURING THE IDEAL FLOW AND FUNCTIONALITY. 
+                ONCE THE LAYOUT WAS FINALIZED, WE DEVELOPED 3D RENDERS, BRINGING THE VISION INTO LIFE. 
+                THESE RENDERS SERVE AS A BLUEPRINT FOR CONSTRUCTION AND TO SHOWCASE THE PARK'S REALISTIC LOOK.
             </p>
             
-            <!-- Gallery Section - здесь меняются изображения -->
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Skatepark concept" class="gallery-image">
-                    <div class="sticker-overlay">SK8</div>
+                    <img src="images/gallery-1.jpg" alt="Urban landscape" class="gallery-image">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop" alt="Community space" class="gallery-image">
-                    <div class="sticker-overlay">CULTURE</div>
+                    <img src="images/gallery-2.jpg" alt="Street culture" class="gallery-image">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Cultural hub" class="gallery-image">
-                    <div class="sticker-overlay">FREEDOM</div>
+                    <img src="images/gallery-3.jpg" alt="Urban movement" class="gallery-image">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Space Section -->
+    <section class="the-space">
+        <div class="container">
+            <h2 class="section-title" data-en="THE SPACE" data-th="พื้นที่">THE SPACE</h2>
+            
+            <!-- Main Description -->
+            <div class="space-intro">
+                <h3 class="space-main-title" data-en="1,650 SQM OF PURE ENERGY" data-th="1,650 ตร.ม. ของพลังงานบริสุทธิ์">1,650 SQM OF PURE ENERGY</h3>
+                <p class="space-description" data-en="THE PLACE IS A 1,650 SQM SPACE DESIGNED TO UNITE ACTION SPORTS, CREATIVITY, AND COMMUNITY." data-th="เดอะเพลสเป็นพื้นที่ 1,650 ตารางเมตร ที่ออกแบบมาเพื่อรวมกีฬาเอ็กซ์ตรีม ความคิดสร้างสรรค์ และชุมชนเข้าด้วยกัน">
+                    THE PLACE IS A 1,650 SQM SPACE DESIGNED TO UNITE ACTION SPORTS, CREATIVITY, AND COMMUNITY.
+                </p>
+            </div>
+
+            <!-- Zones Layout -->
+            <div class="zones-grid">
+                <!-- Skatepark Zone -->
+                <div class="zone-card skatepark-zone">
+                    <h3 class="zone-title" data-en="SKATEPARK & EVENT ZONE" data-th="โซนสเก็ตปาร์กและงานอีเวนต์">SKATEPARK & EVENT ZONE</h3>
+                    <div class="zone-size" data-en="1,275 SQM" data-th="1,275 ตร.ม.">1,275 SQM</div>
+                    <div class="zone-features">
+                        <div class="feature-item">
+                            <span class="feature-size" data-en="600 SQM" data-th="600 ตร.ม.">600 SQM</span>
+                            <span class="feature-desc" data-en="COVERED AREA FOR ALL-WEATHER RIDING" data-th="พื้นที่มุงหลังคาสำหรับการขี่ทุกสภาพอากาศ">COVERED AREA FOR ALL-WEATHER RIDING</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-size" data-en="675 SQM" data-th="675 ตร.ม.">675 SQM</span>
+                            <span class="feature-desc" data-en="OUTDOOR SKATE SPACE WITH FLEXIBLE FEATURES" data-th="พื้นที่สเก็ตกลางแจ้งที่ปรับเปลี่ยนได้">OUTDOOR SKATE SPACE WITH FLEXIBLE FEATURES</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Zone -->
+                <div class="zone-card community-zone">
+                    <h3 class="zone-title" data-en="COMMUNITY ZONE" data-th="โซนชุมชน">COMMUNITY ZONE</h3>
+                    <div class="zone-size" data-en="375 SQM" data-th="375 ตร.ม.">375 SQM</div>
+                    <div class="zone-amenities">
+                        <div class="amenity-item" data-en="CAFÉ & RESTAURANT" data-th="คาเฟ่และร้านอาหาร">CAFÉ & RESTAURANT</div>
+                        <div class="amenity-item" data-en="BBQ AREA" data-th="พื้นที่บาร์บีคิว">BBQ AREA</div>
+                        <div class="amenity-item" data-en="GAMES & COWORKING" data-th="เกมส์และโคเวิร์กกิ้ง">GAMES & COWORKING</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Closing Statement -->
+            <div class="space-closing">
+                <h3 class="closing-title" data-en="MORE THAN A SKATEPARK" data-th="มากกว่าสเก็ตปาร์ก">MORE THAN A SKATEPARK</h3>
+                <p class="closing-text" data-en="A MOVEMENT." data-th="การเคลื่อนไหว">A MOVEMENT.</p>
             </div>
         </div>
     </section>
@@ -66,116 +115,227 @@
     <!-- Project Plan Section -->
     <section class="project-plan">
         <div class="container">
-            <h2 class="section-title">Project Plan</h2>
-            <p class="plan-text">
-                Our vision spans across 2,500 square meters of prime Hua Hin real estate. The project will be developed 
-                in three phases over 18 months, starting with the core skatepark infrastructure, followed by community 
-                facilities, and finally the cultural programming spaces. We're targeting completion by Q4 2024, creating 
-                a year-round destination for both locals and international visitors.
+            <h2 class="section-title" data-en="TOTAL PROJECT EXPENSES" data-th="ค่าใช้จ่ายโครงการทั้งหมด">TOTAL PROJECT EXPENSES</h2>
+            
+            <!-- Total Amount Display -->
+            <div class="total-amount">
+                <div class="total-number" data-en="4,298,000" data-th="4,298,000">4,298,000</div>
+                <div class="total-currency" data-en="THB TOTAL NEEDED" data-th="บาท ที่ต้องการทั้งหมด">THB TOTAL NEEDED</div>
+            </div>
+            
+            <!-- Expense Breakdown -->
+            <div class="expense-breakdown">
+                <div class="expense-item">
+                    <div class="expense-category" data-en="CONSTRUCTION & MATERIALS" data-th="การก่อสร้างและวัสดุ">CONSTRUCTION & MATERIALS</div>
+                    <div class="expense-amount" data-en="1,800,000 THB" data-th="1,800,000 บาท">1,800,000 THB</div>
+                </div>
+                <div class="expense-item">
+                    <div class="expense-category" data-en="KITCHEN & FACILITIES" data-th="ครัวและสิ่งอำนวยความสะดวก">KITCHEN & FACILITIES</div>
+                    <div class="expense-amount" data-en="650,000 THB" data-th="650,000 บาท">650,000 THB</div>
+                </div>
+                <div class="expense-item">
+                    <div class="expense-category" data-en="LAND LEASE (2 YEARS)" data-th="ค่าเช่าที่ดิน (2 ปี)">LAND LEASE (2 YEARS)</div>
+                    <div class="expense-amount" data-en="480,000 THB" data-th="480,000 บาท">480,000 THB</div>
+                </div>
+                <div class="expense-item">
+                    <div class="expense-category" data-en="SCHOOL & TEAM" data-th="โรงเรียนและทีม">SCHOOL & TEAM</div>
+                    <div class="expense-amount" data-en="420,000 THB" data-th="420,000 บาท">420,000 THB</div>
+                </div>
+                <div class="expense-item">
+                    <div class="expense-category" data-en="BUILDERS & LABOR" data-th="ผู้รับเหมาและแรงงาน">BUILDERS & LABOR</div>
+                    <div class="expense-amount" data-en="580,000 THB" data-th="580,000 บาท">580,000 THB</div>
+                </div>
+                <div class="expense-item">
+                    <div class="expense-category" data-en="SOLAR SYSTEM" data-th="ระบบพลังงานแสงอาทิตย์">SOLAR SYSTEM</div>
+                    <div class="expense-amount" data-en="240,000 THB" data-th="240,000 บาท">240,000 THB</div>
+                </div>
+                <div class="expense-item">
+                    <div class="expense-category" data-en="COMMUNITY PROGRAMS" data-th="โปรแกรมชุมชน">COMMUNITY PROGRAMS</div>
+                    <div class="expense-amount" data-en="128,000 THB" data-th="128,000 บาท">128,000 THB</div>
+                </div>
+            </div>
+            
+            <p class="plan-text" data-en="TO BRING THE PLACE TO LIFE, WE ARE SEEKING FUNDING TO DEVELOP A HIGH-QUALITY ENVIRONMENT WITH LOTS OF BENEFITS FOR THE LOCAL AND INTERNATIONAL VISITORS. EVERY CONTRIBUTION GETS US CLOSER TO CREATING A UNIQUE SPACE WHERE SKATEBOARDING, COMMUNITY, AND CULTURE INTERSECT." data-th="เพื่อทำให้เดอะเพลสมีชีวิต เรากำลังหาเงินทุนเพื่อพัฒนาสภาพแวดล้อมคุณภาพสูงที่มีประโยชน์มากมายสำหรับผู้เยี่ยมชมท้องถิ่นและนานาชาติ การมีส่วนร่วมทุกครั้งทำให้เราใกล้เคียงกับการสร้างพื้นที่เฉพาะตัวที่สเก็ตบอร์ด ชุมชน และวัฒนธรรมมาบรรจบกัน">
+                TO BRING THE PLACE TO LIFE, WE ARE SEEKING FUNDING TO DEVELOP A HIGH-QUALITY ENVIRONMENT 
+                WITH LOTS OF BENEFITS FOR THE LOCAL AND INTERNATIONAL VISITORS. EVERY CONTRIBUTION 
+                GETS US CLOSER TO CREATING A UNIQUE SPACE WHERE SKATEBOARDING, COMMUNITY, AND CULTURE INTERSECT.
             </p>
         </div>
     </section>
 
-    <!-- Meet the Team Section -->
+    <!-- Team Section -->
     <section class="team">
         <div class="container">
-            <h2 class="section-title">Meet the Team</h2>
+            <h2 class="section-title" data-en="OUR TEAM" data-th="ทีมของเรา">OUR TEAM</h2>
             <div class="team-list">
                 <div class="team-member">
-                    <div class="member-photo">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="SEKI - Founder" class="member-image">
-                    </div>
+                    <img src="images/team-seki.jpg" alt="SEKI" class="member-image">
                     <h3 class="member-name">SEKI</h3>
-                    <p class="member-role">FOUNDER</p>
-                    <p class="member-description">PROUD DAD, SKATEBOARDING ENTHUSIAST, MULTILINGUAL ENTREPRENEUR, WITH OVER 20 YEARS LIVING AND WORKING IN THAILAND. DRIVING FORCE BEHIND THE PLACE. DEDICATED TO CREATE A FAMILY-INSPIRED SPACE WHERE SKATEBOARDING AND COMMUNITY THRIVES.</p>
+                    <p class="member-role" data-en="FOUNDER" data-th="ผู้ก่อตั้ง">FOUNDER</p>
+                    <p class="member-description" data-en="PROUD DAD, SKATEBOARDING ENTHUSIAST, MULTILINGUAL ENTREPRENEUR, WITH OVER 20 YEARS LIVING AND WORKING IN THAILAND. DRIVING FORCE BEHIND THE PLACE. DEDICATED TO CREATE A FAMILY-INSPIRED SPACE WHERE SKATEBOARDING AND COMMUNITY THRIVES." data-th="พ่อที่ภาคภูมิใจ ผู้หลงใหลในสเก็ตบอร์ด นักธุรกิจหลายภาษา มีประสบการณ์ 20 ปีในการอาศัยและทำงานในไทย แรงขับเคลื่อนเบื้องหลังเดอะเพลส มุ่งมั่นสร้างพื้นที่แรงบันดาลใจจากครอบครัวที่สเก็ตบอร์ดและชุมชนเจริญรุ่งเรือง">PROUD DAD, SKATEBOARDING ENTHUSIAST, MULTILINGUAL ENTREPRENEUR, WITH OVER 20 YEARS LIVING AND WORKING IN THAILAND. DRIVING FORCE BEHIND THE PLACE. DEDICATED TO CREATE A FAMILY-INSPIRED SPACE WHERE SKATEBOARDING AND COMMUNITY THRIVES.</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-photo">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop" alt="ARTEM - Digital Architect" class="member-image">
-                    </div>
+                    <img src="images/team-artem.jpg" alt="ARTEM" class="member-image">
                     <h3 class="member-name">ARTEM</h3>
-                    <p class="member-role">DIGITAL ARCHITECT</p>
-                    <p class="member-description">TECH AND DESIGN EXPERT, BMX ENTHUSIAST WITH A CREATIVE VISION FOR DIGITAL IDENTITY. SHAPES THE PLACE'S ONLINE PRESENCE. VISUALS, WEBSITES, AND CONTENT. BRINGS AUTHENTIC ENERGY TO THE PROJECT.</p>
+                    <p class="member-role" data-en="DIGITAL ARCHITECT" data-th="สถาปนิกดิจิทัล">DIGITAL ARCHITECT</p>
+                    <p class="member-description" data-en="TECH AND DESIGN EXPERT, BMX ENTHUSIAST WITH A CREATIVE VISION FOR DIGITAL IDENTITY. SHAPES THE PLACE'S ONLINE PRESENCE. VISUALS, WEBSITES, AND CONTENT. BRINGS AUTHENTIC ENERGY TO THE PROJECT." data-th="ผู้เชี่ยวชาญด้านเทคโนโลยีและการออกแบบ ผู้หลงใหลใน BMX ด้วยวิสัยทัศน์สร้างสรรค์สำหรับตัวตนดิจิทัล สร้างสรรค์การมีอยู่ออนไลน์ของเดอะเพลส ภาพ เว็บไซต์ และเนื้อหา นำพลังงานที่แท้จริงมาสู่โครงการ">TECH AND DESIGN EXPERT, BMX ENTHUSIAST WITH A CREATIVE VISION FOR DIGITAL IDENTITY. SHAPES THE PLACE'S ONLINE PRESENCE. VISUALS, WEBSITES, AND CONTENT. BRINGS AUTHENTIC ENERGY TO THE PROJECT.</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-photo">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" alt="KENJI - Prodigy Skateboarder" class="member-image">
-                    </div>
+                    <img src="images/team-kenji.jpg" alt="KENJI" class="member-image">
                     <h3 class="member-name">KENJI</h3>
-                    <p class="member-role">PRODIGY SKATEBOARDER</p>
-                    <p class="member-description">ACHIEVING HIGH LEVEL BY AGE 12, INVITED TO THE JACKALOPE FESTIVAL IN CANADA, THAI NATIONAL TEAM RIDER. INSPIRATIONAL FIGURE FOR YOUNG SKATERS, ACTIVELY INVOLVED IN SKATEPARK DESIGNING.</p>
+                    <p class="member-role" data-en="SKATEPARK DESIGNER & SKATEBOARD PRODIGY" data-th="นักออกแบบสเก็ตปาร์ก & อัจฉริยะสเก็ตบอร์ด">SKATEPARK DESIGNER & SKATEBOARD PRODIGY</p>
+                    <p class="member-description" data-en="PRODIGY SKATEBOARDER, ACHIEVING HIGH LEVEL BY AGE 12, INVITED TO THE JACKALOPE FESTIVAL IN CANADA, THAI NATIONAL TEAM RIDER. INSPIRATIONAL FIGURE FOR YOUNG SKATERS, ACTIVELY INVOLVED IN SKATEPARK DESIGNING." data-th="นักสเก็ตบอร์ดอัจฉริยะ บรรลุระดับสูงในวัย 12 ปี ได้รับเชิญไปงาน Jackalope Festival ในแคนาดา นักแข่งทีมชาติไทย บุคคลสร้างแรงบันดาลใจสำหรับนักสเก็ตหนุ่ม มีส่วนร่วมอย่างแข็งขันในการออกแบบสเก็ตปาร์ก">PRODIGY SKATEBOARDER, ACHIEVING HIGH LEVEL BY AGE 12, INVITED TO THE JACKALOPE FESTIVAL IN CANADA, THAI NATIONAL TEAM RIDER. INSPIRATIONAL FIGURE FOR YOUNG SKATERS, ACTIVELY INVOLVED IN SKATEPARK DESIGNING.</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-photo">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop" alt="ANN - Dedicated Mom" class="member-image">
-                    </div>
+                    <img src="images/team-ann.jpg" alt="ANN" class="member-image">
                     <h3 class="member-name">ANN</h3>
-                    <p class="member-role">DEDICATED MOM</p>
-                    <p class="member-description">PASSIONATE ABOUT GREAT FOOD AND COMMUNITY, EXPERIENCED IN RESTAURANT MANAGEMENT. CREATES A WELCOMING ATMOSPHERE AT THE PLACE, CRAFTING DELICIOUS MEALS, UNIQUE BEVERAGES AND MENUS THAT UNITE THE COMMUNITY.</p>
+                    <p class="member-role" data-en="CAFÉ MANAGER & CHEF" data-th="ผู้จัดการคาเฟ่ & เชฟ">CAFÉ MANAGER & CHEF</p>
+                    <p class="member-description" data-en="DEDICATED MOM PASSIONATE ABOUT GREAT FOOD AND COMMUNITY, EXPERIENCED IN RESTAURANT MANAGEMENT. CREATES A WELCOMING ATMOSPHERE AT THE PLACE, CRAFTING DELICIOUS MEALS, UNIQUE BEVERAGES AND MENUS THAT UNITE THE COMMUNITY." data-th="แม่ที่อุทิศตนซึ่งหลงใหลในอาหารดีและชุมชน มีประสบการณ์ในการจัดการร้านอาหาร สร้างบรรยากาศต้อนรับที่เดอะเพลส ปรุงอาหารอร่อย เครื่องดื่มเฉพาะตัว และเมนูที่รวมชุมชนเข้าด้วยกัน">DEDICATED MOM PASSIONATE ABOUT GREAT FOOD AND COMMUNITY, EXPERIENCED IN RESTAURANT MANAGEMENT. CREATES A WELCOMING ATMOSPHERE AT THE PLACE, CRAFTING DELICIOUS MEALS, UNIQUE BEVERAGES AND MENUS THAT UNITE THE COMMUNITY.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Support Us Section -->
+    <!-- Why Support & What We Offer Section -->
     <section class="why-support">
         <div class="container">
-            <h2 class="section-title">Why Support Us</h2>
-            <div class="reasons-list">
-                <div class="reason-item">
-                    <h3 class="reason-title">Community Impact</h3>
-                    <p class="reason-text">Creating a safe, inclusive space for youth development and community building</p>
+            <h2 class="section-title" data-en="WHY SUPPORT THE PLACE" data-th="เหตุใดต้องสนับสนุนเดอะเพลส">WHY SUPPORT THE PLACE</h2>
+            
+            <!-- Combined Benefits Grid -->
+            <div class="benefits-grid">
+                <div class="benefit-item community-impact">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3 class="benefit-title" data-en="SAFE PROGRESSIVE SPACE" data-th="พื้นที่ปลอดภัยและก้าวหน้า">SAFE PROGRESSIVE SPACE</h3>
+                    <p class="benefit-text" data-en="CREATING A SAFE, INCLUSIVE SPACE FOR RIDERS AND YOUTH DEVELOPMENT" data-th="สร้างพื้นที่ปลอดภัยและรวมทุกคนสำหรับไรเดอร์และการพัฒนาเยาวชน">CREATING A SAFE, INCLUSIVE SPACE FOR RIDERS AND YOUTH DEVELOPMENT</p>
                 </div>
-                <div class="reason-item">
-                    <h3 class="reason-title">Tourism Boost</h3>
-                    <p class="reason-text">Attracting international visitors and putting Hua Hin on the global skate map</p>
+                
+                <div class="benefit-item health-lifestyle">
+                    <div class="benefit-icon">💪</div>
+                    <h3 class="benefit-title" data-en="HEALTHY LIFESTYLE" data-th="ไลฟ์สไตล์เพื่อสุขภาพ">HEALTHY LIFESTYLE</h3>
+                    <p class="benefit-text" data-en="PROMOTING HEALTHY LIFESTYLE OPTIONS AND PHYSICAL ACTIVITY FOR YOUTH" data-th="ส่งเสริมตัวเลือกไลฟ์สไตล์เพื่อสุขภาพและกิจกรรมทางกายสำหรับเยาวชน">PROMOTING HEALTHY LIFESTYLE OPTIONS AND PHYSICAL ACTIVITY FOR YOUTH</p>
                 </div>
-                <div class="reason-item">
-                    <h3 class="reason-title">Cultural Exchange</h3>
-                    <p class="reason-text">Fostering connections between local Thai culture and global skateboarding community</p>
+                
+                <div class="benefit-item tourism-boost">
+                    <div class="benefit-icon">🌍</div>
+                    <h3 class="benefit-title" data-en="TOURISM & BUSINESS" data-th="การท่องเที่ยวและธุรกิจ">TOURISM & BUSINESS</h3>
+                    <p class="benefit-text" data-en="ATTRACTING INTERNATIONAL VISITORS AND SUPPORTING LOCAL BUSINESSES" data-th="ดึงดูดนักท่องเที่ยวนานาชาติและสนับสนุนธุรกิจท้องถิ่น">ATTRACTING INTERNATIONAL VISITORS AND SUPPORTING LOCAL BUSINESSES</p>
                 </div>
-                <div class="reason-item">
-                    <h3 class="reason-title">Economic Growth</h3>
-                    <p class="reason-text">Generating local jobs and supporting surrounding businesses</p>
+                
+                <div class="benefit-item job-creation">
+                    <div class="benefit-icon">💼</div>
+                    <h3 class="benefit-title" data-en="JOB CREATION" data-th="การสร้างงาน">JOB CREATION</h3>
+                    <p class="benefit-text" data-en="GENERATING JOBS IN COACHING, EVENTS, OPERATIONS AND MANAGEMENT" data-th="สร้างงานในการฝึกสอน อีเวนต์ การดำเนินงาน และการจัดการ">GENERATING JOBS IN COACHING, EVENTS, OPERATIONS AND MANAGEMENT</p>
+                </div>
+                
+                <div class="benefit-item youth-programs">
+                    <div class="benefit-icon">🏆</div>
+                    <h3 class="benefit-title" data-en="YOUTH DEVELOPMENT" data-th="การพัฒนาเยาวชน">YOUTH DEVELOPMENT</h3>
+                    <p class="benefit-text" data-en="YOUTH PROGRAMS, COMPETITIONS AND SKILL DEVELOPMENT OPPORTUNITIES" data-th="โปรแกรมเยาวชน การแข่งขัน และโอกาสพัฒนาทักษะ">YOUTH PROGRAMS, COMPETITIONS AND SKILL DEVELOPMENT OPPORTUNITIES</p>
+                </div>
+                
+                <div class="benefit-item cultural-hub">
+                    <div class="benefit-icon">🎨</div>
+                    <h3 class="benefit-title" data-en="CULTURAL EXCHANGE" data-th="การแลกเปลี่ยนวัฒนธรรม">CULTURAL EXCHANGE</h3>
+                    <p class="benefit-text" data-en="A CULTURAL HUB BLENDING THAI CULTURE WITH GLOBAL SKATEBOARDING COMMUNITY" data-th="ศูนย์กลางวัฒนธรรมที่ผสมผสานวัฒนธรรมไทยกับชุมชนสเก็ตบอร์ดโลก">A CULTURAL HUB BLENDING THAI CULTURE WITH GLOBAL SKATEBOARDING COMMUNITY</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Progress Section -->
+    <section class="funding-progress">
+        <div class="container">
+            <h2 class="section-title" data-en="FUNDING PROGRESS" data-th="ความคืบหน้าการระดมทุน">FUNDING PROGRESS</h2>
+            
+            <div class="progress-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-en="1,250,000" data-th="1,250,000">1,250,000</div>
+                    <div class="stat-label" data-en="RAISED" data-th="ระดมทุนได้">RAISED</div>
+                    <div class="stat-currency" data-en="THB" data-th="บาท">THB</div>
+                </div>
+                <div class="stat-divider">OF</div>
+                <div class="stat-item">
+                    <div class="stat-number" data-en="4,298,000" data-th="4,298,000">4,298,000</div>
+                    <div class="stat-label" data-en="GOAL" data-th="เป้าหมาย">GOAL</div>
+                    <div class="stat-currency" data-en="THB" data-th="บาท">THB</div>
+                </div>
+            </div>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 29%;">
+                        <span class="progress-text">29%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-info">
+                <div class="supporters-count">
+                    <span class="count-number">847</span>
+                    <span class="count-label" data-en="SUPPORTERS" data-th="ผู้สนับสนุน">SUPPORTERS</span>
+                </div>
+                <div class="days-left">
+                    <span class="days-number">156</span>
+                    <span class="days-label" data-en="DAYS LEFT" data-th="วันที่เหลือ">DAYS LEFT</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Donate Section -->
-    <section class="donate">
+    <section id="donate" class="donate">
         <div class="container">
-            <h2 class="section-title">Donate Now</h2>
-            <p class="donate-text">
-                Every contribution brings us closer to making The Place Hua Hin a reality. Your support will help us 
-                create something truly special—a space where passion meets purpose, and where the next generation 
-                of skaters, artists, and community leaders can thrive.
+            <h2 class="section-title" data-en="DONATE NOW" data-th="บริจาคตอนนี้">DONATE NOW</h2>
+            <p class="donate-text" data-en="EVERY CONTRIBUTION BRINGS US CLOSER TO MAKING THE PLACE HUA HIN A REALITY. YOUR SUPPORT WILL HELP US CREATE SOMETHING TRULY SPECIAL—A SPACE WHERE PASSION MEETS PURPOSE, AND WHERE THE NEXT GENERATION OF SKATERS, ARTISTS, AND COMMUNITY LEADERS CAN THRIVE." data-th="การมีส่วนร่วมทุกครั้งทำให้เราใกล้เคียงกับการทำให้เดอะเพลสหัวหินเป็นจริง การสนับสนุนของคุณจะช่วยเราสร้างสิ่งที่พิเศษอย่างแท้จริง—พื้นที่ที่ความหลงใหลพบจุดประสงค์ และที่คนรุ่นใหม่ของนักสเก็ต ศิลปิน และผู้นำชุมชนสามารถเจริญเติบโต">
+                EVERY CONTRIBUTION BRINGS US CLOSER TO MAKING THE PLACE HUA HIN A REALITY. YOUR SUPPORT WILL HELP US 
+                CREATE SOMETHING TRULY SPECIAL—A SPACE WHERE PASSION MEETS PURPOSE, AND WHERE THE NEXT GENERATION 
+                OF SKATERS, ARTISTS, AND COMMUNITY LEADERS CAN THRIVE.
             </p>
             
-            <!-- редактируем кнопку доната -->
-            <a href="#" class="donate-button">DONATE NOW</a>
+            <a href="#" class="donate-button" data-en="DONATE NOW" data-th="บริจาคตอนนี้">DONATE NOW</a>
             
-            <p class="payment-methods">PromptPay • PayPal • QR Payment Available</p>
+            <p class="payment-methods" data-en="PromptPay • PayPal • QR Payment Available" data-th="PromptPay • PayPal • การชำระเงิน QR ที่มีอยู่">PromptPay • PayPal • QR Payment Available</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title" data-en="CONTACT" data-th="ติดต่อ">CONTACT</h2>
             <div class="contact-info">
-                <p class="contact-item">
-                    <strong>Email:</strong> 
-                    <a href="mailto:hello@theplacehuahin.com" class="contact-link">hello@theplacehuahin.com</a>
-                </p>
-                <p class="contact-item">
-                    <strong>Phone:</strong> 
-                    <a href="tel:+66123456789" class="contact-link">+66 12 345 6789</a>
-                </p>
-                <p class="contact-item">
-                    <strong>Address:</strong> 
-                    <span>123 Beach Road, Hua Hin, Prachuap Khiri Khan, Thailand</span>
-                </p>
+                <div class="contact-item">
+                    <strong data-en="EMAIL:" data-th="อีเมล:">EMAIL:</strong> 
+                    <a href="mailto:MondialTHAI@gmail.com" class="contact-link">MondialTHAI@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong data-en="PHONE:" data-th="โทรศัพท์:">PHONE:</strong> 
+                    <a href="tel:+66891891777" class="contact-link">+66 891-891-777</a>
+                </div>
+                <div class="contact-item">
+                    <strong data-en="ADDRESS:" data-th="ที่อยู่:">ADDRESS:</strong> 
+                    <span data-en="42 Soi 88 Hua Hin, Hua Hin District, Prachuap Khiri Khan" data-th="42 ซอย 88 หัวหิน อำเภอหัวหิน ประจวบคีรีขันธ์">42 Soi 88 Hua Hin, Hua Hin District, Prachuap Khiri Khan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media">
+        <div class="container">
+            <h2 class="social-title" data-en="FOLLOW THE MOVEMENT" data-th="ติดตามการเคลื่อนไหว">FOLLOW THE MOVEMENT</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/theplacethailand?igsh=MXY2MHJycDAzcWI0eQ==" target="_blank" class="social-link instagram">
+                    <div class="social-icon">📸</div>
+                    <span class="social-name" data-en="INSTAGRAM" data-th="อินสตาแกรม">INSTAGRAM</span>
+                </a>
+                <a href="https://wa.me/66891891777" target="_blank" class="social-link whatsapp">
+                    <div class="social-icon">💬</div>
+                    <span class="social-name" data-en="WHATSAPP" data-th="วอทส์แอป">WHATSAPP</span>
+                </a>
+                <a href="https://t.me/theplacehuahin" target="_blank" class="social-link telegram">
+                    <div class="social-icon">✈️</div>
+                    <span class="social-name" data-en="TELEGRAM" data-th="เทเลแกรม">TELEGRAM</span>
+                </a>
             </div>
         </div>
     </section>
@@ -183,8 +343,185 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">Built by Skaters, Backed by Community</p>
+            <p class="footer-text" data-en="BUILT BY SKATERS, BACKED BY COMMUNITY" data-th="สร้างโดยนักสเก็ต สนับสนุนโดยชุมชน">BUILT BY SKATERS, BACKED BY COMMUNITY</p>
         </div>
     </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Current language (default English)
+        let currentLang = 'en';
+
+        // Language switcher function
+        function switchLanguage() {
+            const newLang = currentLang === 'en' ? 'th' : 'en';
+            const langText = document.getElementById('langText');
+            
+            // Update all elements with data attributes
+            const elements = document.querySelectorAll('[data-en][data-th]');
+            
+            elements.forEach(element => {
+                const text = element.getAttribute('data-' + newLang);
+                if (text) {
+                    element.textContent = text;
+                }
+            });
+            
+            // Update language button text
+            langText.textContent = newLang === 'en' ? 'ไทย' : 'EN';
+            
+            // Update current language
+            currentLang = newLang;
+            
+            // Update document language attribute
+            document.documentElement.lang = newLang === 'en' ? 'en' : 'th';
+        }
+
+        // THE PLACE interactive elements
+        const placeElements = ['🛹', '🎯', '⭐', '🔥', '💫', '✨', '🏆', '🎨'];
+        
+        document.addEventListener('click', function(e) {
+            // Don't create effects when clicking language switcher
+            if (e.target.closest('.language-switcher')) {
+                return;
+            }
+            
+            const element = document.createElement('div');
+            element.className = 'fun-element';
+            element.style.left = e.clientX + 'px';
+            element.style.top = e.clientY + 'px';
+            element.textContent = placeElements[Math.floor(Math.random() * placeElements.length)];
+            document.body.appendChild(element);
+            
+            setTimeout(() => {
+                element.remove();
+            }, 2000);
+        });
+
+        // Smooth skateboard cursor with rolling effect
+        const skateCursor = document.createElement('div');
+        skateCursor.className = 'skate-cursor';
+        skateCursor.innerHTML = '🛹';
+        document.body.appendChild(skateCursor);
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let skateX = 0;
+        let skateY = 0;
+        let lastMouseX = 0;
+        let lastMouseY = 0;
+        let velocity = 0;
+        let rotation = 0;
+        let targetRotation = 0;
+        let isMoving = false;
+        let stopTimer = null;
+        
+        // Smooth animation loop
+        function animateSkate() {
+            // Calculate smooth movement with easing
+            const ease = isMoving ? 0.15 : 0.08;
+            skateX += (mouseX - skateX) * ease;
+            skateY += (mouseY - skateY) * ease;
+            
+            // Calculate velocity and direction
+            const deltaX = mouseX - lastMouseX;
+            const deltaY = mouseY - lastMouseY;
+            const currentVelocity = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+            
+            // Smooth velocity for more realistic movement
+            velocity += (currentVelocity - velocity) * 0.3;
+            
+            // Detect movement
+            if (velocity > 0.5) {
+                isMoving = true;
+                clearTimeout(stopTimer);
+                stopTimer = setTimeout(() => {
+                    isMoving = false;
+                }, 100);
+            }
+            
+            // Calculate rotation based on movement direction with more realistic physics
+            if (velocity > 1) {
+                targetRotation = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+                
+                // Add slight wobble for more realistic skateboard movement
+                if (velocity > 5) {
+                    targetRotation += Math.sin(Date.now() * 0.01) * (velocity * 0.5);
+                }
+            }
+            
+            // Smooth rotation with easing
+            const rotationDiff = targetRotation - rotation;
+            // Handle rotation wrap around
+            if (rotationDiff > 180) targetRotation -= 360;
+            if (rotationDiff < -180) targetRotation += 360;
+            
+            rotation += (targetRotation - rotation) * (isMoving ? 0.2 : 0.1);
+            
+            // Calculate scale based on velocity for momentum effect
+            const scale = 1 + Math.min(velocity * 0.015, 0.3);
+            
+            // Apply position, rotation and scale
+            skateCursor.style.left = (skateX - 15) + 'px';
+            skateCursor.style.top = (skateY - 15) + 'px';
+            skateCursor.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+            
+            // Create wheel trails based on velocity with better distribution
+            if (velocity > 2 && Math.random() < Math.min(velocity * 0.03, 0.4)) {
+                createWheelTrail(skateX, skateY, velocity);
+            }
+            
+            // Store last mouse position
+            lastMouseX = mouseX;
+            lastMouseY = mouseY;
+            
+            requestAnimationFrame(animateSkate);
+        }
+        
+        // Update mouse position
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // Create wheel trail with velocity-based effects
+        function createWheelTrail(x, y, vel) {
+            const trail = document.createElement('div');
+            trail.className = 'wheel-trail';
+            
+            // Position with slight randomization
+            const offsetX = (Math.random() - 0.5) * 15;
+            const offsetY = (Math.random() - 0.5) * 15;
+            trail.style.left = (x + offsetX) + 'px';
+            trail.style.top = (y + offsetY) + 'px';
+            
+            // Size based on velocity
+            const size = Math.max(2, Math.min(vel * 0.5, 8));
+            trail.style.width = size + 'px';
+            trail.style.height = size + 'px';
+            
+            document.body.appendChild(trail);
+            
+            // Fade duration based on velocity
+            const duration = Math.max(800, Math.min(vel * 100, 2000));
+            setTimeout(() => {
+                trail.remove();
+            }, duration);
+        }
+        
+        // Start animation
+        animateSkate();
+
+        // Add smooth hover effects
+        document.querySelectorAll('.team-member, .reason-item, .gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>
