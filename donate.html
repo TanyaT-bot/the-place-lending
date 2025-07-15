@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - THE PLACE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&family=Itim&display=swap" rel="stylesheet">
+    <title>Support THE PLACE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,260 +13,513 @@
         }
 
         body {
-            font-family: 'Nunito', sans-serif;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a1a1a 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            color: #ffffff;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border: 4px solid #333;
-            padding: 40px;
+            padding: 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
         }
 
         .container::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shine 3s infinite;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+            z-index: 1;
         }
 
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        .content {
+            position: relative;
+            z-index: 2;
         }
 
         .back-button {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            background: #ff6b6b;
-            color: white;
-            border: 3px solid #333;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-weight: 600;
+            top: 30px;
+            left: 30px;
+            color: #ffffff;
             text-decoration: none;
-            transform: rotate(-2deg);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 10;
         }
 
         .back-button:hover {
-            transform: rotate(0deg) scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-2px);
         }
 
         .title {
-            font-family: 'Itim', cursive;
-            font-size: 3em;
-            color: #333;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 0px #ff6b6b;
-            transform: rotate(-1deg);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 40px;
-            font-weight: 500;
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .support-note {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            color: #86efac;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .payment-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .payment-option {
-            background: white;
-            border: 4px solid #333;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
             cursor: pointer;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .payment-option:nth-child(1) {
-            transform: rotate(-2deg);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .payment-option:nth-child(2) {
-            transform: rotate(2deg);
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-
         .payment-option:hover {
-            transform: rotate(0deg) scale(1.05);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        .payment-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .payment-title {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 2em;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .payment-description {
-            font-size: 1.1em;
-            line-height: 1.6;
-            opacity: 0.9;
+        .payment-option.active {
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.1);
         }
 
         .coming-soon {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #ffeaa7;
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
+            top: 15px;
+            right: 15px;
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
             font-weight: 600;
-            border: 2px solid #333;
-            transform: rotate(15deg);
         }
 
-        .qr-section {
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 10px;
-            border: 2px dashed rgba(255,255,255,0.5);
+        .payment-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .payment-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .payment-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-details {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .payment-option.active .payment-details {
+            display: block;
         }
 
         .qr-placeholder {
-            width: 150px;
-            height: 150px;
-            background: rgba(255,255,255,0.3);
-            border: 2px dashed rgba(255,255,255,0.7);
-            border-radius: 10px;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1a1a1a;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 0.9em;
+            margin: 1rem auto;
+            border-radius: 8px;
+            font-weight: 600;
             text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .thank-you {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .thank-you-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 40px 30px;
                 margin: 10px;
             }
-            
+
             .title {
-                font-size: 2em;
+                font-size: 2.5rem;
             }
-            
+
             .payment-options {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 1.5rem;
             }
-            
-            .payment-option {
-                padding: 20px;
+
+            .back-button,
+            .language-switcher {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 1rem;
             }
-            
-            .payment-icon {
-                font-size: 3em;
+
+            .language-switcher {
+                margin-left: 1rem;
             }
-            
-            .payment-title {
-                font-size: 1.5em;
+        }
+        .material-support-wide {
+            grid-column: span 2;
+            min-width: 340px;
+        }
+        .material-support-wide .donate-button {
+            width: 80%;
+            max-width: 350px;
+            margin: 0 auto;
+            display: block;
+        }
+        @media (max-width: 700px) {
+            .material-support-wide {
+                grid-column: span 1;
+                min-width: 0;
+            }
+            .material-support-wide .donate-button {
+                width: 100%;
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-button">← Back</a>
+        <a href="index.html" class="back-button" id="back-button">← Back to Project</a>
         
-        <h1 class="title">DONATE</h1>
-        <p class="subtitle">Choose your preferred payment method</p>
-        <p class="subtitle">เลือกวิธีการชำระเงินที่คุณต้องการ</p>
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <button class="lang-btn" onclick="toggleLanguage()">
+                <span class="lang-text" id="lang-display">TH</span>
+            </button>
+        </div>
         
-        <div class="payment-options">
-            <div class="payment-option" onclick="selectPayPal()">
-                <div class="coming-soon">Coming Soon</div>
-                <span class="payment-icon">💳</span>
-                <h3 class="payment-title">PayPal</h3>
-                <p class="payment-description">
-                    Secure international payments<br>
-                    การชำระเงินระหว่างประเทศที่ปลอดภัย
-                </p>
+        <div class="content">
+            <h1 class="title" id="page-title">SUPPORT THE PLACE</h1>
+            <p class="subtitle" id="page-subtitle">Help us build a creative space that feels like home in Hua Hin</p>
+            
+            <div class="support-note">
+                <strong id="support-note-title">Every contribution matters!</strong> 
+                <span id="support-note-text">Your support helps us create a unique space where skaters, bikers, artists, and the community come together to build something amazing.</span>
             </div>
             
-            <div class="payment-option" onclick="selectPromptPay()">
-                <span class="payment-icon">📱</span>
-                <h3 class="payment-title">PromptPay</h3>
-                <p class="payment-description">
-                    Quick Thai mobile payment<br>
-                    การชำระเงินผ่านมือถือแบบไทย
-                </p>
-                <div class="qr-section">
-                    <div class="qr-placeholder">
-                        QR Code<br>
-                        รหัส QR
-                    </div>
-                    <p style="font-size: 0.9em;">
-                        Phone: +66 891-891-777<br>
-                        โทร: +66 891-891-777
+            <div class="payment-options">
+                <div class="payment-option" onclick="selectPayPal()">
+                    <div class="coming-soon" id="coming-soon">Coming Soon</div>
+                    <span class="payment-icon">💳</span>
+                    <h3 class="payment-title">PayPal</h3>
+                    <p class="payment-description" id="paypal-desc">
+                        Secure international payments<br>
+                        <span style="opacity: 0.6;">Perfect for overseas supporters</span>
                     </p>
                 </div>
+                <div class="payment-option" onclick="selectPromptPay()">
+                    <span class="payment-icon">📱</span>
+                    <h3 class="payment-title">PromptPay</h3>
+                    <p class="payment-description" id="promptpay-desc">
+                        Quick Thai mobile payment<br>
+                        <span style="opacity: 0.6;">Instant transfer option</span>
+                    </p>
+                    <div class="payment-details">
+                        <div class="qr-placeholder" id="qr-text">
+                            QR Code
+                        </div>
+                        <div class="contact-info" id="phone-info">
+                            Phone: +66 891-891-777
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-option" onclick="selectSBP()">
+                    <span class="payment-icon">💸</span>
+                    <h3 class="payment-title">SBP</h3>
+                    <p class="payment-description">
+                        Fast Russian bank transfer<br>
+                        <span style="opacity: 0.6;">No commission for most banks</span>
+                    </p>
+                    <div class="payment-details">
+                        <div class="contact-info">
+                            SBP Account: <b>+7 999 123-45-67</b><br>
+                            Name: THE PLACE
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-option" onclick="selectCrypto()">
+                    <span class="payment-icon">🪙</span>
+                    <h3 class="payment-title">Crypto</h3>
+                    <p class="payment-description">
+                        Pay with cryptocurrency<br>
+                        <span style="opacity: 0.6;">USDT, BTC, ETH</span>
+                    </p>
+                    <div class="payment-details">
+                        <div class="contact-info">
+                            Wallet address: <b>your-crypto-wallet-here</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-option material-support-wide" onclick="window.open('https://wa.me/66891891777?text=Hello!%20I%20want%20to%20offer%20material%20support%20for%20THE%20PLACE.', '_blank');">
+                    <span class="payment-icon">🛠️</span>
+                    <h3 class="payment-title" id="material-support-title">Material Support</h3>
+                    <p class="payment-description" id="material-support-desc">
+                        Donate building materials, equipment, gear, or your skills.<br>
+                        <span style="opacity: 0.6;">Contact us via WhatsApp to help with materials, equipment, or labor.</span>
+                        <br><span id="material-support-desc-th" style="display:none;">Пожертвуйте стройматериалы, оборудование, экипировку или рабочую силу.<br><span style='opacity:0.6;'>Свяжитесь с нами в WhatsApp, чтобы предложить помощь материалами, оборудованием или трудом.</span></span>
+                    </p>
+                    <div class="payment-details">
+                        <a href="https://wa.me/66891891777?text=Hello!%20I%20want%20to%20offer%20material%20support%20for%20THE%20PLACE." target="_blank" class="donate-button" style="background:#25d366; color:#fff; font-size:1rem; font-weight:600; padding:12px 24px; border-radius:8px; text-decoration:none; margin-top:1rem;">Contact via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thank-you">
+                <p class="thank-you-text" id="thank-you-message">
+                    "Together, we're not just building an action sports park – we're creating a movement that will inspire generations of riders and bring our community closer together in Hua Hin."
+                </p>
             </div>
         </div>
     </div>
 
     <script>
+        let currentLanguage = 'en';
+
+        const translations = {
+            en: {
+                'back-button': '← Back to Project',
+                'page-title': 'SUPPORT THE PLACE',
+                'page-subtitle': 'Help us build a creative space that feels like home in Hua Hin',
+                'support-note-title': 'Every contribution matters!',
+                'support-note-text': 'Your support helps us create a unique space where skaters, bikers, artists, and the community come together to build something amazing.',
+                'coming-soon': 'Coming Soon',
+                'paypal-desc': 'Secure international payments<br><span style="opacity: 0.6;">Perfect for overseas supporters</span>',
+                'promptpay-desc': 'Quick Thai mobile payment<br><span style="opacity: 0.6;">Instant transfer option</span>',
+                'qr-text': 'QR Code',
+                'phone-info': 'Phone: +66 891-891-777',
+                'thank-you-message': '"Together, we\'re not just building an action sports park – we\'re creating a movement that will inspire generations of riders and bring our community closer together in Hua Hin."',
+                'lang-display': 'TH'
+            },
+            th: {
+                'back-button': '← กลับไปยังโครงการ',
+                'page-title': 'สนับสนุน THE PLACE',
+                'page-subtitle': 'ช่วยเราสร้างพื้นที่สร้างสรรค์ที่รู้สึกเหมือนบ้านในหัวหิน',
+                'support-note-title': 'ทุกการสนับสนุนมีความหมาย!',
+                'support-note-text': 'การสนับสนุนของคุณช่วยให้เราสร้างพื้นที่พิเศษที่นักสเก็ต นักขี่จักรยาน ศิลปิน และชุมชนมารวมกันเพื่อสร้างสรรค์สิ่งที่น่าทึ่ง',
+                'coming-soon': 'เร็วๆ นี้',
+                'paypal-desc': 'การชำระเงินระหว่างประเทศที่ปลอดภัย<br><span style="opacity: 0.6;">เหมาะสำหรับผู้สนับสนุนต่างประเทศ</span>',
+                'promptpay-desc': 'การชำระเงินผ่านมือถือแบบไทย<br><span style="opacity: 0.6;">ตัวเลือกโอนเงินทันที</span>',
+                'qr-text': 'รหัส QR',
+                'phone-info': 'โทรศัพท์: +66 891-891-777',
+                'thank-you-message': '"เราไม่ได้แค่สร้างสวนกีฬาเอ็กซ์ตรีม แต่เรากำลังสร้างการเคลื่อนไหวที่จะสร้างแรงบันดาลใจให้กับนักขี่รุ่นต่อรุ่นและนำชุมชนของเราในหัวหินมาใกล้ชิดกันมากขึ้น"',
+                'lang-display': 'EN'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'th' : 'en';
+            
+            // Update all text elements with translations
+            Object.keys(translations[currentLanguage]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.innerHTML = translations[currentLanguage][key];
+                }
+            });
+
+            // Update document language attribute
+            document.documentElement.lang = currentLanguage;
+            
+            // Save language preference
+            localStorage.setItem('preferredLanguage', currentLanguage);
+        }
+
+        // Initialize language on page load
+        function initLanguage() {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage && savedLanguage !== currentLanguage) {
+                toggleLanguage();
+            }
+        }
+
         function selectPayPal() {
-            alert('PayPal payment coming soon!\nการชำระเงินผ่าน PayPal เร็วๆ นี้!');
+            if (currentLanguage === 'en') {
+                alert('PayPal payment coming soon!\nPlease contact us directly for now.\n\nEmail: MondialTHAI@gmail.com\nPhone: +66 891-891-777');
+            } else {
+                alert('การชำระเงินผ่าน PayPal เร็วๆ นี้!\nกรุณาติดต่อเราโดยตรงตอนนี้\n\nอีเมล: MondialTHAI@gmail.com\nโทรศัพท์: +66 891-891-777');
+            }
         }
 
         function selectPromptPay() {
-            alert('Please scan the QR code or transfer to +66 891-891-777\nกรุณาสแกน QR Code หรือโอนเงินไปที่ +66 891-891-777');
+            // Remove active class from all options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            
+            // Add active class to PromptPay option
+            event.currentTarget.classList.add('active');
+            
+            if (currentLanguage === 'en') {
+                alert('Please scan the QR code or transfer to +66 891-891-777\nThank you for your support!\n\nFor questions, contact: MondialTHAI@gmail.com');
+            } else {
+                alert('กรุณาสแกน QR Code หรือโอนเงินไปที่ +66 891-891-777\nขอบคุณสำหรับการสนับสนุน!\n\nสำหรับคำถาม ติดต่อ: MondialTHAI@gmail.com');
+            }
         }
+
+        function selectSBP() {
+            // Remove active class from all options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            
+            // Add active class to SBP option
+            event.currentTarget.classList.add('active');
+            
+            if (currentLanguage === 'en') {
+                alert('SBP transfer coming soon!\nPlease contact us directly for the details.\n\nEmail: MondialTHAI@gmail.com\nPhone: +66 891-891-777');
+            } else {
+                alert('การโอนเงิน SBP เร็วๆ นี้!\nกรุณาติดต่อเราโดยตรงสำหรับรายละเอียดการทำธุรกรรม.\n\nอีเมล: MondialTHAI@gmail.com\nโทรศัพท์: +66 891-891-777');
+            }
+        }
+
+        function selectCrypto() {
+            // Remove active class from all options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            
+            // Add active class to Crypto option
+            event.currentTarget.classList.add('active');
+            
+            if (currentLanguage === 'en') {
+                alert('Crypto payment coming soon!\nPlease contact us directly for the wallet address.\n\nEmail: MondialTHAI@gmail.com\nPhone: +66 891-891-777');
+            } else {
+                alert('การชำระเงินด้วยคอร์ปอเรชัน เร็วๆ นี้!\nกรุณาติดต่อเราโดยตรงสำหรับที่อยู่ของกระเป๋าเงิน.\n\nอีเมล: MondialTHAI@gmail.com\nโทรศัพท์: +66 891-891-777');
+            }
+        }
+
+        function selectMaterialSupport() {
+            // Remove active class from all options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            
+            // Add active class to Material Support option
+            event.currentTarget.classList.add('active');
+
+            if (currentLanguage === 'en') {
+                alert('Thank you for your interest in material support!\nPlease contact us via WhatsApp to discuss the details.\n\nEmail: MondialTHAI@gmail.com\nPhone: +66 891-891-777');
+            } else {
+                alert('ขอขอบคุณความสนใจในการสนับสนุนทรัพยากร!\nกรุณาติดต่อเราโดยตรงผ่าน WhatsApp เพื่ออภิปรายรายละเอียด.\n\nอีเมล: MondialTHAI@gmail.com\nโทรศัพท์: +66 891-891-777');
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initLanguage);
     </script>
 </body>
 </html> 
