@@ -19,6 +19,11 @@ const translations = {
         'vision-title': 'Our Vision',
         'vision-text': 'Creating a world-class action sports facility that serves as a hub for the Thai skateboarding, biking, and action sports community, fostering creativity, skill development, and cultural exchange.',
         
+        // Vision section details
+        'skatepark-title': 'Skatepark',
+        'community-title': 'Community & Coworking',
+        'cafe-title': 'Café & Retail',
+        
 
         
         // Investment section
@@ -92,6 +97,11 @@ const translations = {
         // Vision section
         'vision-title': 'วิสัยทัศน์ของเรา',
         'vision-text': 'การสร้างสิ่งอำนวยความสะดวกกีฬาเอ็กซ์ตรีมระดับโลกที่ทำหน้าที่เป็นศูนย์กลางของชุมชนสเก็ตบอร์ด จักรยาน และกีฬาเอ็กซ์ตรีมไทย ส่งเสริมความคิดสร้างสรรค์ การพัฒนาทักษะ และการแลกเปลี่ยนวัฒนธรรม',
+        
+        // Vision section details
+        'skatepark-title': 'สเก็ตพาร์ค',
+        'community-title': 'ชุมชนและทำงานร่วม',
+        'cafe-title': 'คาเฟ่และร้านค้า',
         
 
         
