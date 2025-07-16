@@ -27,18 +27,7 @@ const translations = {
 
         
         // Investment section
-        'plan-title': 'Investment Breakdown',
-        'total-number': '฿4,298,000',
-        'total-currency': 'Total Project Cost',
-        'construction-category': 'Construction & Infrastructure',
-        'equipment-category': 'Sports Equipment & Features',
-        'permits-category': 'Permits & Legal Requirements',
-        'design-category': 'Professional Design & Planning',
-        'safety-category': 'Safety Systems & Insurance',
-        'amenities-category': 'Community Amenities & Interior',
-        'marketing-category': 'Marketing & Launch',
-        'contingency-category': 'Contingency Fund',
-        'plan-text': 'Every baht invested goes directly toward creating Thailand\'s most advanced action sports facility, designed to international standards and built to last.',
+
         
         // Team section
         'team-title': 'Our Team',
@@ -105,19 +94,7 @@ const translations = {
         
 
         
-        // Investment section
-        'plan-title': 'รายละเอียดการลงทุน',
-        'total-number': '฿4,298,000',
-        'total-currency': 'ค่าใช้จ่ายโครงการทั้งหมด',
-        'construction-category': 'การก่อสร้างและโครงสร้างพื้นฐาน',
-        'equipment-category': 'อุปกรณ์กีฬาและคุณสมบัติ',
-        'permits-category': 'ใบอนุญาตและข้อกำหนดทางกฎหมาย',
-        'design-category': 'การออกแบบและการวางแผนมืออาชีพ',
-        'safety-category': 'ระบบความปลอดภัยและประกันภัย',
-        'amenities-category': 'สิ่งอำนวยความสะดวกชุมชนและการตกแต่งภายใน',
-        'marketing-category': 'การตลาดและการเปิดตัว',
-        'contingency-category': 'กองทุนฉุกเฉิน',
-        'plan-text': 'ทุกบาทที่ลงทุนจะไปสู่การสร้างสิ่งอำนวยความสะดวกกีฬาเอ็กซ์ตรีมที่ทันสมัยที่สุดของประเทศไทยโดยตรง ออกแบบตามมาตรฐานสากลและสร้างให้ยั่งยืน',
+
         
         // Team section
         'team-title': 'ทีมงานของเรา',
